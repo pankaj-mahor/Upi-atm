@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UPI ATM - GET CASH ANYWHERE</title>
+    <style>
+        .detailed-box {
+            border-top-right-radius: 70px;
+
+        }
+
+        .detailed-box h1 {
+            margin-right: 1rem;
+            font-size: 24px;
+        }
+
+        .h1 {
+            color: #000;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Thank You for Using our Service🙂</h1>
+        <div class="detailed-box">
+            <h1>Transaction Sucess</h1>
+            <p class="small">You Paid ₹ 5000 to ATM 654874</p>
+            <div class="card-pin">
+                <p>Your Card Number is</p>
+                <h2 id="card-number">2012212021215487</h2>
+            </div>
+            <div class="card-pin">
+                <p>Card PIN</p>
+                <h2 id="card-pin">945782</h2>
+            </div>
+            <button class="btn-pay">Mark as Complete</button>
+            <p class="small right">2-May-2020 14:42:21</p>
+            <p class="small">Show PIN to ATM owner to get Cash</p>
+            <p class="small">*Agreed to Terms</p>
+        </div>
+        <div class="additional">
+            <p><a href="#">Report Problem</a></p>
+            <p><a href="#">Contact US</a></p>
+        </div>
+    </div>
+
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        let cardnumber = document.getElementById('card-number');
+        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
+        cardnumber.innerText = updated;
+    </script>
+</body>
+
+</html>

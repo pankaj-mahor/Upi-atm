@@ -22,6 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     padding: 2rem;
     background: rgb(169, 182, 187);
@@ -31,6 +32,10 @@ body {
 h1 {
     color: #fff;
     margin-left: 1rem;
+}
+
+.right {
+    text-align: right;
 }
 
 input:disabled {
@@ -106,7 +111,7 @@ input:disabled {
 
 .small {
     font-size: 80%;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
     color: #fff;
 }
 
@@ -191,4 +196,38 @@ input[type='submit']:hover {
 
 .btn-pay:hover {
     filter: brightness(90%);
+}
+
+
+
+/* AFTER PAYMENT PAGE */
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status p {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+#card-pin {
+    letter-spacing: 5px;
+}
+
+.additional {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.additional>*+* {
+    margin-left: 1rem;
+}
+
+.additional p a {
+    color: #fff;
+    background: var(--blue);
+    padding: 8px 12px;
+    border-radius: 10px;
 }
