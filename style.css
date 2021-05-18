@@ -136,3 +136,34 @@ input[type='submit']:hover {
     border: 1px solid #141359;
     /* transform: scale(1.1); */
 }
+
+
+@media (max-width: 465px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-field input[type='number'] {
+        width: 100%;
+    }
+
+    /* CODE TO USE LATER If Demand*/
+    /* .align {
+        flex-direction: column-reverse;
+    }
+
+    .btns {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    .btns>*+* {
+        margin-left: 1rem;
+    } */
+
+    input[type='submit'] {
+        display: block;
+        margin: 0 auto;
+        margin-top: 0.5rem;
+    }
+}
