@@ -12,13 +12,7 @@ document.getElementById('form').addEventListener('submit',function(e){
 btn.forEach(element => {
     let circleAmount = document.getElementById('circle-amount');
     element.addEventListener('click' , function(){
-
-        let updatedValue = (circleAmount.value = str.concat(element.value));
-
-        // if(updatedValue!==0){
-        //     console.log(updatedValue)
-        // }
-        // ValidateDigit(parseInt(updatedValue.substr(2)))
+      let updatedValue = (circleAmount.value = str.concat(element.value));
     })
 });
 
