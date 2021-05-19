@@ -61,9 +61,11 @@ input:disabled {
     border-radius: 15px;
     /* background: #1f79a1; */
     background: rgb(17, 67, 89);
+    /* background: rgba(0, 0, 0, .5); */
     background: var(--gradient-tricolor);
-    /* background-image: url(./img/flag.jpeg); */
-    /* background-size: contain; */
+    /* background-image: url(./img/flag.jpeg);
+    background-size: contain;
+    background-blend-mode: multiply; */
     /* background-image: var(--gradient-blue) */
     /* background: linear-gradient(79deg, rgba(17, 67, 89, 1) 52%, rgba(31, 121, 161, 1) 91%);
     border-top-right-radius: 100px; */
@@ -221,6 +223,7 @@ input[type='submit']:hover {
     font-size: 16px;
     text-decoration: underline;
 }
+
 
 #card-pin {
     letter-spacing: 5px;

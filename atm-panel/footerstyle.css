@@ -63,7 +63,6 @@ body {
     position: relative;
     display: flex;
     padding: 8px;
-    font-size: 1rem;
     border-radius: 16px;
 }
 
@@ -88,15 +87,15 @@ body {
 }
 
 .nav-item:nth-child(2) label {
-    background-color: #b73892;
+    background-color: #ff8000;
 }
 
 .nav-item:nth-child(2) span {
-    color: #b73892;
+    color: #ff8000;
 }
 
 .nav-item:nth-child(2) span:before {
-    background-color: #b73892;
+    background-color: #ff8000;
 }
 
 .nav-item:nth-child(3) {
@@ -104,15 +103,15 @@ body {
 }
 
 .nav-item:nth-child(3) label {
-    background-color: #eda600;
+    background-color: #008000;
 }
 
 .nav-item:nth-child(3) span {
-    color: #eda600;
+    color: #008000;
 }
 
 .nav-item:nth-child(3) span:before {
-    background-color: #eda600;
+    background-color: #008000;
 }
 
 .nav-item:nth-child(4) {
@@ -136,12 +135,13 @@ body {
 }
 
 .nav-item label {
-    position: relative;
-    display: inline-block;
+    content: '\f015';
+    font-family: "Font Awesome 5 Free";
     width: 1em;
     height: 1em;
-    background-color: inherit;
+    background: #000;
     border-radius: 50%;
+
 }
 
 .nav-item label:before {
