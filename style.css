@@ -9,8 +9,10 @@
     --green: #008000;
     --blue: #0000ff;
     --orange: #ff8000;
-    --gradient-tricolor: linear-gradient(to right top, #ff8000, #ff846c, #ff9cb1, #ffbde4, #ffddfe, #e8ddff, #d1ddff, #bddcf9, #65cae6, #00b6b7, #009e6d, #008000);
+    --gradient-tricolor: linear-gradient(to right bottom, #ff8000, #ff846c, #e8ddff, #bddcf9, #65cae6, #00b6b7, #009e6d, #008000);
     --gradient-blue: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%);
+
+    /* linear-gradient(to right bottom, #ff8000, #ff846c, #ff9cb1, #ffbde4, #ffddfe, #e8ddff, #d1ddff, #bddcf9, #65cae6, #00b6b7, #009e6d, #008000); */
 }
 
 body {
@@ -254,6 +256,14 @@ input[type='submit']:hover {
     color: #000;
     font-size: 20px;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+.detailed-box-2 p.small {
+    color: #000;
+    font-weight: 500;
+    text-align: left;
+    margin-top: -10px;
 }
 
 .detailed-information {
