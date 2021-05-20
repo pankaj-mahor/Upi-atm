@@ -17,21 +17,29 @@
 
 body {
     font-family: monospace, sans-serif;
+    background: var(--gradient-tricolor);
+    background-size: cover;
 }
 
-.container {
-    /* background: red; */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* height: 100vh; */
-    padding: 2rem;
-    /* background: rgb(169, 182, 187); */
-    background-image: var(--gradient-tricolor);
-    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
+h1 {
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.right {
+    text-align: right;
+}
+
+#circle-amount {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-weight: 900;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
 }
 
 .detailed-box {
@@ -49,10 +57,6 @@ body {
     /* background-image: var(--gradient-blue) */
     /* background: linear-gradient(79deg, rgba(17, 67, 89, 1) 52%, rgba(31, 121, 161, 1) 91%);
     border-top-right-radius: 100px; */
-}
-
-.detailed-box :is(h1, h2, p) {
-    color: #000;
 }
 
 .btns {
@@ -82,12 +86,39 @@ body {
     /* filter: brightness(80%); */
 }
 
-h1 {
-    color: #fff;
+.form-field {
+    position: relative;
+    margin-top: 0.5rem;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-.right {
+.form-field input[type='number'] {
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+    outline: none;
+    border: none;
+    width: 250px;
+}
+
+
+.form-field label {
+    font-size: 12px;
+    color: #fff;
+    margin-left: 3px;
+}
+
+.small {
+    font-size: 80%;
+    margin: 0.5rem 1rem;
+    color: #fff;
+}
+
+p.small a {
+    margin-bottom: -5px;
+    display: block;
+    color: #fff;
     text-align: right;
 }
 
@@ -122,4 +153,95 @@ h1 {
 }
 
 
-/* CARD GENERATED */
+/* ATM PANEL  */
+.detailed-box :is(h1, h2, p) {
+    color: #000;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order h1 {
+    font-size: 18px;
+}
+
+.status {
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.order-number {
+    /* position: absolute;
+    top: 0%; */
+    /* margin: 12px; */
+    /* margin-bottom: 15px; */
+    margin-top: -5px;
+    background: #fff;
+    display: inline;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: -5px;
+}
+
+.btns-atm {
+    display: flex;
+    width: 100%;
+}
+
+.btns-atm .btn {
+    width: 45%;
+    /* display: inline-block; */
+    /* width: max-content; */
+}
+
+.btns-atm>*+* {
+    margin-left: 2rem;
+}
+
+.btns-atm .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 20px;
+    background: var(--green);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #111;
+    cursor: pointer;
+}
+
+.btns-atm .btn:hover {
+    filter: brightness(90%);
+}
+
+.btns-atm .btn.decline {
+    background: var(--orange);
+    color: #000;
+}
+
+.container-atm {
+    /* background: red; */
+    width: 100%;
+    max-width: 80em;
+    /* min-height: 100%; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    /* flex-direction: column; */
+    /* height: 100vh; */
+    /* padding: 2rem; */
+    /* background: rgb(169, 182, 187); */
+    /* background-image: var(--gradient-tricolor); */
+    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
+}
