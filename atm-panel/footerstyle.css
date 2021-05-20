@@ -57,7 +57,7 @@ body {
 .nav {
     display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     /* background: red; */
     justify-content: space-between;
 }

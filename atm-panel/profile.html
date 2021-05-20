@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styling.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="footerstyle.css">
+    <title>UPI ATM - GET CASH ANYWHERE</title>
+</head>
+<style>
+    .detailed-box {
+        width: 300px;
+        position: relative;
+        margin: 1rem 1rem;
+
+    }
+</style>
+
+<body>
+
+    <div class="container-atm">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="footer-nav">
+        <!-- <div class="source"><a target="blank"
+                href="https://dribbble.com/shots/5925052-Google-Bottom-Bar-Navigation-Pattern"><span>inspered from
+                </span>Aurélien Salomon</a></div> -->
+        <div class="phone">
+            <div class="phone-footer">
+                <div class="nav">
+                    <div class="nav-item" id="home" onclick="window.location.href='home.html'">
+                        <label for="Home"><img src="https://img.icons8.com/metro/20/000000/home.png" /></label>
+                        <input type="radio" name="nav" value="Home" id="Home" /><span>Home</span>
+                    </div>
+                    <!-- <div class="nav-item" id="request" onclick="window.location.href='#'">
+                        <label for="Likes"><img
+                                src="https://img.icons8.com/ios-filled/20/000000/request-money.png" /></label>
+                        <input type="radio" name="nav" value="Likes" id="Likes" /><span>Requests</span>
+                    </div> -->
+                    <div class="nav-item" onclick="window.location.href='history.html'">
+                        <label for="Search"><img
+                                src="https://img.icons8.com/fluent-systems-filled/20/000000/block-chain.png" /></label>
+                        <input type="radio" name="nav" value="Search" id="Search" /><span>History</span>
+                    </div>
+                    <div class="nav-item" onclick="window.location.href='profile.html'">
+                        <label for="Profile"><img
+                                src="https://img.icons8.com/metro/20/000000/administrator-male.png" /></label>
+                        <input type="radio" name="nav" value="Profile" checked id="Profile" /><span>Profile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cardnumber = document.getElementById('card-number');
+        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
+        cardnumber.innerText = updated;
+    </script>
+</body>
+
+</html>
