@@ -17,18 +17,20 @@
 
 body {
     font-family: monospace, sans-serif;
-
+    background: var(--gradient-tricolor);
+    background-size: cover;
 }
 
 .container {
     /* background: red; */
     width: 100%;
+    min-height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     /* padding: 2rem; */
     background: rgb(169, 182, 187);
     background-image: var(--gradient-tricolor);
@@ -44,7 +46,7 @@ h1 {
     text-align: right;
 }
 
-input:disabled {
+#circle-amount {
     width: 90px;
     height: 90px;
     text-align: center;
@@ -52,6 +54,8 @@ input:disabled {
     border-radius: 50%;
     background: #fff;
     font-size: 1.1rem;
+    border: none;
+    outline: none;
 }
 
 .detailed-box {
@@ -286,4 +290,98 @@ input[type='submit']:hover {
 
 .ans {
     text-align: right;
+}
+
+
+/* ATM PANEL  */
+.detailed-box :is(h1, h2, p) {
+    color: #000;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order h1 {
+    font-size: 18px;
+}
+
+.status {
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.order-number {
+    /* position: absolute;
+    top: 0%; */
+    /* margin: 12px; */
+    /* margin-bottom: 15px; */
+    margin-top: -5px;
+    background: #fff;
+    display: inline;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: -5px;
+}
+
+.btns-atm {
+    display: flex;
+    width: 100%;
+}
+
+.btns-atm .btn {
+    width: 45%;
+    /* display: inline-block; */
+    /* width: max-content; */
+}
+
+.btns-atm>*+* {
+    margin-left: 2rem;
+}
+
+.btns-atm .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 20px;
+    background: var(--green);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #111;
+    cursor: pointer;
+}
+
+.btns-atm .btn:hover {
+    filter: brightness(90%);
+}
+
+.btns-atm .btn.decline {
+    background: var(--orange);
+    color: #000;
+}
+
+.container-atm {
+    /* background: red; */
+    width: 100%;
+    max-width: 80em;
+    /* min-height: 100%; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    /* flex-direction: column; */
+    /* height: 100vh; */
+    /* padding: 2rem; */
+    /* background: rgb(169, 182, 187); */
+    /* background-image: var(--gradient-tricolor); */
+    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
 }

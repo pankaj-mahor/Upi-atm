@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 
     <title>UPI ATM - GET CASH ANYWHERE</title>
@@ -25,47 +23,47 @@
 
             <div class="card-pin">
                 <p>Your Card Number is</p>
-                <h2 id="card-number"">2012212021215487</h2>
+                <h2 id="card-number">2012212021215487</h2>
             </div>
 
-            <p class=" small">*Pin Will be generated After Payment</p>
-                    <p class="small">*Keep Pin and Card Details Safe</p>
-            </div>
-
-            <div class="detailed-box-2">
-                <h1>Transaction Details</h1>
-                <p class="small">You are paying ₹ 5000 to ATM 654874</p>
-                <div class="detailed-information">
-                    <div class="ques">
-                        <p>Approval Status :</p>
-                        <p>Date :</p>
-                        <p>Amount :</p>
-                        <p>ATM ID :</p>
-                    </div>
-                    <div class="ans">
-                        <p>Success</p>
-                        <p>12-06-2021</p>
-                        <p>2000</p>
-                        <p>978572</p>
-                    </div>
-                </div>
-                <button class="btn-pay">PAY NOW</button>
-            </div>
-
-            <div class="additional">
-                <p><a href="#">Report Problem</a></p>
-                <p><a href="#">Contact US</a></p>
-            </div>
-            <div class="additional">
-                <p>MADE IN INDIA ♥</p>
-            </div>
+            <p class="small">*Pin Will be generated After Payment</p>
+            <p class="small">*Keep Pin and Card Details Safe</p>
         </div>
-        <!-- <script src="./script.js"></script> -->
-        <script>
-            let cardnumber = document.getElementById('card-number');
-            let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
-            cardnumber.innerText = updated;
-        </script>
+
+        <div class="detailed-box-2">
+            <h1>Transaction Details</h1>
+            <p class="small">You are paying ₹ 5000 to ATM 654874</p>
+            <div class="detailed-information">
+                <div class="ques">
+                    <p>Approval Status :</p>
+                    <p>Date :</p>
+                    <p>Amount :</p>
+                    <p>ATM ID :</p>
+                </div>
+                <div class="ans">
+                    <p>Success</p>
+                    <p>12-06-2021</p>
+                    <p>2000</p>
+                    <p>978572</p>
+                </div>
+            </div>
+            <button class="btn-pay">PAY NOW</button>
+        </div>
+
+        <div class="additional">
+            <p><a href="#">Report Problem</a></p>
+            <p><a href="#">Contact US</a></p>
+        </div>
+        <div class="additional">
+            <p>MADE IN INDIA ♥</p>
+        </div>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        let cardnumber = document.getElementById('card-number');
+        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
+        cardnumber.innerText = updated;
+    </script>
 </body>
 
 </html>

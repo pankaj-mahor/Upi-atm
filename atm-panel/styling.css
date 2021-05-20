@@ -17,7 +17,6 @@
 
 body {
     font-family: monospace, sans-serif;
-
 }
 
 .container {
@@ -28,30 +27,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 2rem;
-    background: rgb(169, 182, 187);
+    /* background: rgb(169, 182, 187); */
     background-image: var(--gradient-tricolor);
     /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
-}
-
-h1 {
-    color: #fff;
-    margin-left: 1rem;
-}
-
-.right {
-    text-align: right;
-}
-
-input:disabled {
-    width: 90px;
-    height: 90px;
-    text-align: center;
-    font-weight: 900;
-    border-radius: 50%;
-    background: #fff;
-    font-size: 1.1rem;
 }
 
 .detailed-box {
@@ -61,9 +41,18 @@ input:disabled {
     border-radius: 15px;
     /* background: #1f79a1; */
     background: rgb(17, 67, 89);
+    /* background: rgba(0, 0, 0, .5); */
+    background: var(--gradient-tricolor);
+    /* background-image: url(./img/flag.jpeg);
+    background-size: contain;
+    background-blend-mode: multiply; */
     /* background-image: var(--gradient-blue) */
     /* background: linear-gradient(79deg, rgba(17, 67, 89, 1) 52%, rgba(31, 121, 161, 1) 91%);
     border-top-right-radius: 100px; */
+}
+
+.detailed-box :is(h1, h2, p) {
+    color: #000;
 }
 
 .btns {
@@ -93,63 +82,14 @@ input:disabled {
     /* filter: brightness(80%); */
 }
 
-.form-field {
-    position: relative;
-    margin-top: 0.5rem;
+h1 {
+    color: #fff;
     margin-left: 1rem;
-    margin-right: 1rem;
 }
 
-.form-field input[type='number'] {
-    padding: 8px 10px;
-    border-radius: 5px;
-    margin-top: 0.2rem;
-    outline: none;
-    border: none;
-    width: 250px;
-}
-
-
-.form-field label {
-    font-size: 12px;
-    color: #fff;
-    margin-left: 3px;
-}
-
-.small {
-    font-size: 80%;
-    margin: 0.5rem 1rem;
-    color: #fff;
-}
-
-p.small a {
-    margin-bottom: -5px;
-    display: block;
-    color: #fff;
+.right {
     text-align: right;
 }
-
-input[type='submit'] {
-    /* background: var(--green); */
-    background: rgba(31, 121, 161, 1);
-    color: #000;
-    padding: 8px 10px;
-    outline: none;
-    border: none;
-    font-weight: 600;
-    border-radius: 10px;
-    border: 1px solid #114359;
-    cursor: pointer;
-    transition: all .4s linear;
-}
-
-input[type='submit']:hover {
-    filter: brightness(150%);
-    color: #000;
-    border: 1px solid #141359;
-    /* transform: scale(1.1); */
-}
-
 
 @media (max-width: 465px) {
     .container {
@@ -183,101 +123,3 @@ input[type='submit']:hover {
 
 
 /* CARD GENERATED */
-.detailed-box .card-pin {
-    margin: 1rem;
-    color: #fff;
-}
-
-.btn-pay {
-    display: block;
-    margin: 0 auto;
-    padding: 8px 20px;
-    background: var(--green);
-    color: #fff;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px #111;
-    cursor: pointer;
-}
-
-.btn-pay:hover {
-    filter: brightness(90%);
-}
-
-
-
-/* AFTER PAYMENT PAGE */
-.status {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.status p {
-    font-size: 16px;
-    text-decoration: underline;
-}
-
-#card-pin {
-    letter-spacing: 5px;
-}
-
-.additional {
-    display: flex;
-    margin-top: 2rem;
-}
-
-.additional>*+* {
-    margin-left: 1rem;
-}
-
-.additional p a {
-    color: #fff;
-    background: var(--blue);
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-
-
-/* AFTER PAYMENT VERSION 2 */
-.detailed-box-2 {
-    padding: 1rem;
-    box-shadow: 0 0 20px #114839;
-    border-radius: 15px;
-    /* background: #1f79a1; */
-    background: #fff;
-    max-width: 314px;
-    width: 97%;
-    margin-top: 1.5rem;
-}
-
-.detailed-box-2 h1 {
-    color: #000;
-    font-size: 20px;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.detailed-box-2 p.small {
-    color: #000;
-    font-weight: 500;
-    text-align: left;
-    margin-top: -10px;
-}
-
-.detailed-information {
-    display: flex;
-    justify-content: space-between;
-    /* margin: 0 1rem   ; */
-
-    margin-bottom: 1rem;
-}
-
-.detailed-information p {
-    font-size: 14px;
-}
-
-.ans {
-    text-align: right;
-}
