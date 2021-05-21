@@ -1,0 +1,198 @@
+/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
+
+* {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f1f9f9;
+}
+
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    /* top: 50%; */
+    width: 74px;
+    height: 36px;
+    /* margin: 0 auto 0 auto; */
+    overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+    background: #111;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before {
+    content: 'YES';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #008000;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked+.knobs:before {
+    content: 'NO';
+    left: 42px;
+    background-color: #f44336;
+}
+
+#button-1 .checkbox:checked~.layer {
+    background-color: #000;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+    transition: 0.3s ease all;
+}
+
+.container-profile {
+    /* background: red; */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* padding: 2rem; */
+    background: rgb(169, 182, 187);
+    background-image: var(--gradient-tricolor);
+    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
+}
+
+.container-profile .detailed-box {
+    max-width: 600px;
+    width: 95%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.cash-available {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.shop-profile {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.verified p {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.verified {
+    text-align: right;
+}
+
+.verified p img {
+    margin-right: 5px;
+}
+
+@media (max-width:414px) {
+    .shop-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .verified p {
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .verified {
+        display: flex;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .verified>*+* {
+        margin-left: 1rem;
+    }
+}
+
+.options ul {
+    list-style: none;
+}
+
+.options ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 15px;
+    color: #111;
+}
+
+.options ul li {
+    margin: 0.5rem 0;
+    background: rgb(243, 241, 241);
+}
+
+.options ul li:hover {
+    filter: brightness(90%);
+}
