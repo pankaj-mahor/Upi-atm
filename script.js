@@ -1,24 +1,21 @@
 const btn = document.querySelectorAll('.btn');
 var str = '₹ ';
 const atmid = document.getElementById('atm-id');
-
+let circleAmount = document.getElementById('circle-amount');
 
 document.getElementById('form').addEventListener('submit',function(e){
-    e.preventDefault();
+    // e.preventDefault();
     // console.log(atmid.value)
+    if (circleAmount.value == 0) {
+      alert('value bhi dal bhai')
+    }
     validateDigit(atmid.value);
 })
 
 btn.forEach(element => {
-    let circleAmount = document.getElementById('circle-amount');
+    
     element.addEventListener('click' , function(){
-
-        let updatedValue = (circleAmount.value = str.concat(element.value));
-
-        // if(updatedValue!==0){
-        //     console.log(updatedValue)
-        // }
-        // ValidateDigit(parseInt(updatedValue.substr(2)))
+      let updatedValue = (circleAmount.value = str.concat(element.value));
     })
 });
 
@@ -29,7 +26,7 @@ function validateDigit(atmid) {
     console.log('yes');
     return true;
   }else{
-    console.log('no');
+    alert('Enter VAlid ATM id');
     return false;
   }
 }

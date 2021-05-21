@@ -6,6 +6,7 @@
 }
 
 :root {
+    --card-bg: linear-gradient(79deg, rgba(17, 67, 89, 1) 52%, rgba(31, 121, 161, 1) 91%);
     --green: #008000;
     --blue: #0000ff;
     --orange: #ff8000;
@@ -17,22 +18,9 @@
 
 body {
     font-family: monospace, sans-serif;
-
-}
-
-.container {
-    /* background: red; */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    /* padding: 2rem; */
-    background: rgb(169, 182, 187);
-    background-image: var(--gradient-tricolor);
-    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
+    /* background: var(--gradient-blue); */
+    background: var(--gradient-tricolor);
+    background-size: cover;
 }
 
 h1 {
@@ -136,28 +124,6 @@ p.small a {
     text-align: right;
 }
 
-input[type='submit'] {
-    /* background: var(--green); */
-    background: rgba(31, 121, 161, 1);
-    color: #000;
-    padding: 8px 10px;
-    outline: none;
-    border: none;
-    font-weight: 600;
-    border-radius: 10px;
-    border: 1px solid #114359;
-    cursor: pointer;
-    transition: all .4s linear;
-}
-
-input[type='submit']:hover {
-    filter: brightness(150%);
-    color: #000;
-    border: 1px solid #141359;
-    /* transform: scale(1.1); */
-}
-
-
 @media (max-width: 465px) {
     .container {
         padding: 1rem;
@@ -189,13 +155,58 @@ input[type='submit']:hover {
 }
 
 
-/* CARD GENERATED */
-.detailed-box .card-pin {
-    margin: 1rem;
-    color: #fff;
+/* ATM PANEL  */
+.detailed-box :is(h1, h2, p) {
+    color: #000;
 }
 
-.btn-pay {
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order h1 {
+    font-size: 18px;
+}
+
+.status {
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.order-number {
+    /* position: absolute;
+    top: 0%; */
+    /* margin: 12px; */
+    /* margin-bottom: 15px; */
+    margin-top: -5px;
+    background: #fff;
+    display: inline;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: -5px;
+}
+
+.btns-atm {
+    display: flex;
+    width: 100%;
+}
+
+.btns-atm .btn {
+    width: 45%;
+    /* display: inline-block; */
+    /* width: max-content; */
+}
+
+.btns-atm>*+* {
+    margin-left: 2rem;
+}
+
+.btns-atm .btn {
     display: block;
     margin: 0 auto;
     padding: 8px 20px;
@@ -208,84 +219,57 @@ input[type='submit']:hover {
     cursor: pointer;
 }
 
-.btn-pay:hover {
+.btns-atm .btn:hover {
     filter: brightness(90%);
 }
 
+.btns-atm .btn.decline {
+    background: var(--orange);
+    color: #000;
+}
 
-
-/* AFTER PAYMENT PAGE */
-.status {
+.container-atm {
+    /* background: red; */
+    width: 100%;
+    max-width: 80em;
+    /* min-height: 100%; */
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.status p {
-    font-size: 16px;
-    text-decoration: underline;
-}
-
-
-#card-pin {
-    letter-spacing: 5px;
-}
-
-.additional {
-    display: flex;
-    margin-top: 2rem;
-}
-
-.additional>*+* {
-    margin-left: 1rem;
-}
-
-.additional p a {
-    color: #fff;
-    background: var(--blue);
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-
-
-/* AFTER PAYMENT VERSION 2 */
-.detailed-box-2 {
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    margin-top: 3rem;
     padding: 1rem;
-    box-shadow: 0 0 20px #114839;
-    border-radius: 15px;
-    /* background: #1f79a1; */
-    background: #fff;
-    max-width: 314px;
-    width: 97%;
-    margin-top: 1.5rem;
+    /* flex-direction: column; */
+    /* height: 100vh; */
+    /* padding: 2rem; */
+    /* background: rgb(169, 182, 187); */
+    /* background-image: var(--gradient-tricolor); */
+    /* background: linear-gradient(79deg, rgba(169, 182, 187, 1) 33%, rgba(31, 121, 161, 1) 91%); */
 }
 
-.detailed-box-2 h1 {
-    color: #000;
-    font-size: 20px;
-    margin-bottom: 1rem;
-    text-align: center;
+.card-pin {
+    padding: 0.5rem 1rem;
 }
 
-.detailed-box-2 p.small {
-    color: #000;
-    font-weight: 500;
-    text-align: left;
-    margin-top: -10px;
+p.small {
+    font-size: 12px;
 }
 
-.detailed-information {
-    display: flex;
-    justify-content: space-between;
-    /* margin: 0 1rem   ; */
-
-    margin-bottom: 1rem;
-}
-
-.detailed-information p {
-    font-size: 14px;
-}
-
-.ans {
+.right {
     text-align: right;
+    margin-top: 7px;
+}
+
+.form-field input[type='number'] {
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+    outline: none;
+    border: none;
+    width: 250px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }

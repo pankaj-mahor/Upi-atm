@@ -12,29 +12,30 @@
 <body>
     <div class="container">
         <div class="detailed-box">
-            <form id="form">
-                <h1>How much?</h1>
-                <div class="align">
-                    <div class="btns">
-                        <button class="btn" value="500">₹ 500</button>
-                        <button class="btn" value="1000">₹ 1000</button>
-                        <button class="btn" value="2000">₹ 2000</button>
-                    </div>
+            <h1>How much?</h1>
+            <div class="align">
+                <div class="btns">
+                    <button class="btn" value="500">₹ 500</button>
+                    <button class="btn" value="1000">₹ 1000</button>
+                    <button class="btn" value="2000">₹ 2000</button>
+                </div>
+
+                <form id="form" action="php.php" method="POST">
                     <div class="clear">
                         <!-- <p>You Selected</p> -->
-                        <input type="text" id="circle-amount" disabled value="₹ 0">
+                        <input type="text" id="circle-amount" readonly value="0">
                     </div>
+            </div>
+            <div class="form-field">
+                <label for="atm-id">Enter ATM ID</label>
+                <div class="input">
+                    <input type="number" placeholder="Enter ATM ID" name="atm-id" id="atm-id">
+                    <input type="submit" value="Proceed">
                 </div>
-                <div class="form-field">
-                    <label for="atm-id">Enter ATM ID</label>
-                    <div class="input">
-                        <input type="number" placeholder="Enter ATM ID" name="atm-id" id="atm-id">
-                        <input type="submit" value="Proceed">
-                    </div>
 
-                </div>
-                <p class="small">*Fees & Charges will be applicable on final page</p>
-                <!-- <p class="small"><a href="#">Register for ATM</a></p> -->
+            </div>
+            <p class="small">*Fees & Charges will be applicable on final page</p>
+            <!-- <p class="small"><a href="#">Register for ATM</a></p> -->
             </form>
         </div>
         <div class="additional">
