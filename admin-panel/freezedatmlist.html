@@ -12,57 +12,42 @@
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="footerstyle.css">
     <title>UPI ATM - GET CASH ANYWHERE</title>
-    <style>
-        .pending {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-    </style>
 </head>
+<style>
+    .detailed-box {
+        width: 300px;
+        position: relative;
+        margin: 1rem 1rem;
+
+    }
+</style>
 
 <body>
 
     <div class="container-atm">
         <table>
-            <caption>Statement Summary</caption>
+            <caption>Freezed Atm List's</caption>
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Atm Date</th>
-                    <th scope="col">Cardnumber</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Atm Id</th>
+                    <th scope="col">Shop Name</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Upload Proof</th>
-                    <!-- <th scope="col">Mark As Complete</th> -->
-
+                    <th scope="col">Unblock</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Id">20</td>
-                    <td data-label="ATM-ID">012016</td>
-                    <td data-label="Card Number">0120345678954512</td>
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Date">03/01/2016</td>
-                    <td data-label="Status" id="status">
-                        <form>
-                            <div class="pending">
-                                <input type="radio" name="pending" id="pending" checked><label
-                                    for="pending">Pending</label>
-                                <input type="radio" name="success" id="success"><label for="success">Success</label>
+                    <td data-label="Id">1</td>
+                    <td data-label="ATM Id">204577</td>
+                    <td data-label="Shop Name">Goyal Enter</td>
+                    <td data-label="Owner">Abhishke</td>
 
-                            </div>
-
-                    </td>
-                    <td data-label="Upload proof">
-                        <input type="file" name="file" id="prof">
-                        <input type="submit" value="Upload" class="btn-pay">
-                        </form>
-                    </td>
-                    <!-- <td data-label="Complte ?">03/01/2016</td> -->
-
+                    <td data-label="Location">Ghaziabad</td>
+                    <td data-label="Status">Freezed</td>
+                    <td data-label="Unblock"><a href="#" id="freeze">Unfreez</a></td>
 
                 </tr>
 

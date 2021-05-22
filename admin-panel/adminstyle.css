@@ -167,6 +167,9 @@ input:focus {
 .container-pro .detailed-box ul {
     list-style: none;
     padding: 1rem 2rem;
+    max-width: 40em;
+    width: 95%;
+    margin: 0 auto;
     /* margin-top: auto; */
     /* background: red; */
 }
@@ -187,4 +190,9 @@ input:focus {
 .container-pro .detailed-box ul li:hover {
     filter: brightness(90%);
     background: rgb(231, 231, 231);
+}
+
+/* Add ATM */
+.form-container {
+    margin: 1rem;
 }
