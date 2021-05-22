@@ -25,17 +25,15 @@
 
     <div class="container-atm">
         <table>
-            <caption>Statement Summary</caption>
+            <caption>Pending payments Summary</caption>
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Atm Date</th>
-                    <th scope="col">Cardnumber</th>
+                    <th scope="col">Atm Id</th>
                     <th scope="col">Amount</th>
                     <th scope="col">Date</th>
                     <th scope="col">Status</th>
                     <th scope="col">Upload Proof</th>
-                    <!-- <th scope="col">Mark As Complete</th> -->
 
                 </tr>
             </thead>
@@ -43,26 +41,10 @@
                 <tr>
                     <td data-label="Id">20</td>
                     <td data-label="ATM-ID">012016</td>
-                    <td data-label="Card Number">0120345678954512</td>
                     <td data-label="Amount">₹1000</td>
                     <td data-label="Date">03/01/2016</td>
-                    <form>
-                        <td data-label="Status" id="status">
-
-                            <div class="pending">
-                                <input type="radio" name="pending" id="pending" checked><label
-                                    for="pending">Pending</label>
-                                <input type="radio" name="success" id="success"><label for="success">Success</label>
-
-                            </div>
-
-                        </td>
-                        <td data-label="Upload proof">
-                            <input type="file" name="file" id="prof">
-                            <input type="submit" value="Upload" class="btn-pay">
-                            <!-- </form> -->
-                        </td>
-                    </form>
+                    <td data-label="Status" id="status">Pending</td>
+                    <td data-label="Upload proof">Nill</td>
                     <!-- <td data-label="Complte ?">03/01/2016</td> -->
 
 
@@ -83,9 +65,6 @@
 
 
     <div class="footer-nav">
-        <!-- <div class="source"><a target="blank"
-                href="https://dribbble.com/shots/5925052-Google-Bottom-Bar-Navigation-Pattern"><span>inspered from
-                </span>Aurélien Salomon</a></div> -->
         <div class="phone">
             <div class="phone-footer">
                 <div class="nav">
@@ -93,11 +72,6 @@
                         <label for="Home"><img src="https://img.icons8.com/metro/20/000000/home.png" /></label>
                         <input type="radio" name="nav" value="Home" id="Home" /><span>Atms</span>
                     </div>
-                    <!-- <div class="nav-item" id="request" onclick="window.location.href='#'">
-                        <label for="Likes"><img
-                                src="https://img.icons8.com/ios-filled/20/000000/request-money.png" /></label>
-                        <input type="radio" name="nav" value="Likes" id="Likes" /><span>Requests</span>
-                    </div> -->
                     <div class="nav-item" onclick="window.location.href='history.html'">
                         <label for="Search"><img
                                 src="https://img.icons8.com/fluent-systems-filled/20/000000/block-chain.png" /></label>
