@@ -273,3 +273,27 @@ p.small {
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+#payment-proof {
+    width: 80px;
+}
+
+/* #payment-proof:hover {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vh;
+    height: 90vh;
+    text-align: center;
+} */
+.goback {
+    text-align: center;
+}
+
+.btn.back {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
