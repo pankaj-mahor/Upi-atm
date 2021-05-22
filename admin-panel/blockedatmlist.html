@@ -9,7 +9,6 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="footerstyle.css">
     <title>UPI ATM - GET CASH ANYWHERE</title>
@@ -27,68 +26,31 @@
 
     <div class="container-atm">
         <table>
-            <caption>Statement Summary</caption>
+            <caption>Blocked Atm List's</caption>
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Atm Date</th>
-                    <th scope="col">Cardnumber</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Atm Id</th>
+                    <th scope="col">Shop Name</th>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
-
+                    <th scope="col">Unblock</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
+                    <td data-label="Id">1</td>
+                    <td data-label="ATM Id">204577</td>
+                    <td data-label="Shop Name">Goyal Enter</td>
+                    <td data-label="Owner">Abhishke</td>
 
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
+                    <td data-label="Location">Ghaziabad</td>
+                    <td data-label="Status">Blocked</td>
+                    <td data-label="Unblock"><a href="#" id="block">Unblock</a></td>
+
                 </tr>
 
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
 
             </tbody>
         </table>
@@ -104,12 +66,15 @@
 
 
     <div class="footer-nav">
+        <!-- <div class="source"><a target="blank"
+                href="https://dribbble.com/shots/5925052-Google-Bottom-Bar-Navigation-Pattern"><span>inspered from
+                </span>Aurélien Salomon</a></div> -->
         <div class="phone">
             <div class="phone-footer">
                 <div class="nav">
-                    <div class="nav-item" id="home" onclick="window.location.href='home.html'">
+                    <div class="nav-item" id="home" onclick="window.location.href='atm.html'">
                         <label for="Home"><img src="https://img.icons8.com/metro/20/000000/home.png" /></label>
-                        <input type="radio" name="nav" value="Home" id="Home" /><span>Home</span>
+                        <input type="radio" name="nav" value="Home" id="Home" /><span>Atms</span>
                     </div>
                     <!-- <div class="nav-item" id="request" onclick="window.location.href='#'">
                         <label for="Likes"><img
@@ -131,11 +96,7 @@
         </div>
     </div>
 
-    <script>
-        let cardnumber = document.getElementById('card-number');
-        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
-        cardnumber.innerText = updated;
-    </script>
+
 </body>
 
 </html>

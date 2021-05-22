@@ -9,19 +9,17 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="footerstyle.css">
     <title>UPI ATM - GET CASH ANYWHERE</title>
+    <style>
+        .pending {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
 </head>
-<style>
-    .detailed-box {
-        width: 300px;
-        position: relative;
-        margin: 1rem 1rem;
-
-    }
-</style>
 
 <body>
 
@@ -36,59 +34,40 @@
                     <th scope="col">Amount</th>
                     <th scope="col">Date</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Upload Proof</th>
+                    <!-- <th scope="col">Mark As Complete</th> -->
 
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
+                    <td data-label="Id">20</td>
+                    <td data-label="ATM-ID">012016</td>
+                    <td data-label="Card Number">0120345678954512</td>
                     <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
+                    <td data-label="Date">03/01/2016</td>
+                    <form>
+                        <td data-label="Status" id="status">
+
+                            <div class="pending">
+                                <input type="radio" name="pending" id="pending" checked><label
+                                    for="pending">Pending</label>
+                                <input type="radio" name="success" id="success"><label for="success">Success</label>
+
+                            </div>
+
+                        </td>
+                        <td data-label="Upload proof">
+                            <input type="file" name="file" id="prof">
+                            <input type="submit" value="Upload" class="btn-pay">
+                            <!-- </form> -->
+                        </td>
+                    </form>
+                    <!-- <td data-label="Complte ?">03/01/2016</td> -->
+
+
                 </tr>
 
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Account">20</td>
-                    <td data-label="Due Date">012016</td>
-                    <td data-label="Due Date">0120345678954512</td>
-
-                    <td data-label="Amount">₹1000</td>
-                    <td data-label="Period">03/01/2016</td>
-                    <td data-label="Period">Pending</td>
-                </tr>
 
             </tbody>
         </table>
@@ -104,12 +83,15 @@
 
 
     <div class="footer-nav">
+        <!-- <div class="source"><a target="blank"
+                href="https://dribbble.com/shots/5925052-Google-Bottom-Bar-Navigation-Pattern"><span>inspered from
+                </span>Aurélien Salomon</a></div> -->
         <div class="phone">
             <div class="phone-footer">
                 <div class="nav">
-                    <div class="nav-item" id="home" onclick="window.location.href='home.html'">
+                    <div class="nav-item" id="home" onclick="window.location.href='atm.html'">
                         <label for="Home"><img src="https://img.icons8.com/metro/20/000000/home.png" /></label>
-                        <input type="radio" name="nav" value="Home" id="Home" /><span>Home</span>
+                        <input type="radio" name="nav" value="Home" id="Home" /><span>Atms</span>
                     </div>
                     <!-- <div class="nav-item" id="request" onclick="window.location.href='#'">
                         <label for="Likes"><img
@@ -131,11 +113,7 @@
         </div>
     </div>
 
-    <script>
-        let cardnumber = document.getElementById('card-number');
-        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
-        cardnumber.innerText = updated;
-    </script>
+
 </body>
 
 </html>

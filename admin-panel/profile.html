@@ -10,54 +10,33 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="toggle.css">
-    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="adminstyle.css">
     <link rel="stylesheet" href="footerstyle.css">
     <title>UPI ATM - GET CASH ANYWHERE</title>
 </head>
 <style>
     .detailed-box {
-        width: 300px;
-        position: relative;
-        margin: 1rem 1rem;
-
+        background: rgba(255, 255, 255, 1);
     }
 </style>
 
 <body>
 
-    <div class="container-profile">
+    <div class="container-pro">
         <div class="detailed-box">
-            <div class="cash-available">
-                <h2>Cash Available?</h2>
-                <div class="button r" id="button-1">
-                    <input type="checkbox" class="checkbox">
-                    <div class="knobs"></div>
-                    <div class="layer"></div>
-                </div>
+            <div class="prof">
+                <img src="https://img.icons8.com/color/100/000000/circled-user-male-skin-type-4--v2.png" />
+                <h2>Hey Admin!</h2>
             </div>
 
-            <div class="shop-profile">
-                <div class="profile-details">
-                    <h2>Goyal Enterprises <img style="margin-left: -10px;"
-                            src="https://img.icons8.com/fluent-systems-filled/20/000000/verified-badge.png" /></h2>
-                    <p>Owner : Goyal & Sons</p>
-                    <p>Atm ID : 123456</p>
-                </div>
-                <div class="verified">
-                    <p><img src="https://img.icons8.com/fluent-systems-filled/20/000000/verified-badge.png" />
-                        Trusted (95.57)</p>
-                    <p><img src="https://img.icons8.com/metro/18/000000/rating.png" />Rating (4.5)</p>
-                </div>
-            </div>
-
-            <div class="options">
-                <ul>
-                    <li><a href="mailto:someone@example.com">Contact Support</a></li>
-                    <li><a href="mailto:someone@example.com">Provide Feedback</a></li>
-                    <li><a href="#">Check Status</a></li>
-
-                </ul>
-            </div>
+            <ul>
+                <li><a href="./blockedatmlist.html">See Blocked Atm's</a></li>
+                <li><a href="./freezedatmlist.html">See Freezed Atm's</a></li>
+                <li><a href="./unblockatm.html">Unblock Atm</a></li>
+                <li><a href="pendingpayments.html">Pending Paymnet</a></li>
+                <li><a href="./changepassword.html">Change Password</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
         </div>
 
     </div>
@@ -78,7 +57,7 @@
         <div class="phone">
             <div class="phone-footer">
                 <div class="nav">
-                    <div class="nav-item" id="home" onclick="window.location.href='home.html'">
+                    <div class="nav-item" id="home" onclick="window.location.href='atm.html'">
                         <label for="Home"><img src="https://img.icons8.com/metro/20/000000/home.png" /></label>
                         <input type="radio" name="nav" value="Home" id="Home" /><span>Home</span>
                     </div>
@@ -102,11 +81,6 @@
         </div>
     </div>
 
-    <script>
-        let cardnumber = document.getElementById('card-number');
-        let updated = cardnumber.innerText.replace(/(.{4})/g, '$1 ')
-        cardnumber.innerText = updated;
-    </script>
 </body>
 
 </html>
